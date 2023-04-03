@@ -11,7 +11,7 @@ import theme from "./theme/theme";
 
 function App() {
   const [correctionMode, setCorrectionMode] = useState(false);
-  const [progress, setProgress] = useState(2);
+  const [progress, setProgress] = useState(0);
   const [demandeur, setDemandeur] = useState("");
   const [besoin, setBesoin] = useState({});
   const [config, setConfig] = useState({});
