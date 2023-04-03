@@ -1,0 +1,95 @@
+.App {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  color: #e3e3dc;
+/*   background-color: #1f1f1f; */
+}
+
+.narvContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.corps_all {
+  padding: 10px;
+  flex: 3;
+  overflow: auto;
+
+}
+
+.help-icon {
+  
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.css-x2mu1v-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+  background-color: #3e4a36 !important;
+}
+
+.justify-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: end;
+  width: 100%;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 60%;
+}
+
+.datagrid-header {
+  background-color: #232820;
+  color: #c4c8bb;
+}
+
+.datagrid-cell {
+  border: 1px solid #43493e;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  cursor: pointer;
+}
