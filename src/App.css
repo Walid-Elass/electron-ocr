@@ -14,7 +14,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
+  padding-top: 10px;
+  padding-right:10px;
 }
 
 .corps_all {
@@ -41,6 +42,18 @@
   background-color: #3e4a36 !important;
 }
 
+.css-4ykx3-MuiButtonBase-root-MuiToggleButton-root.Mui-selected{
+  background-color: #e30513 !important;
+  color: #fff !important;
+
+}
+
+.css-po5m0l-MuiButtonBase-root-MuiChip-root .MuiChip-avatar {
+  color: #fff !important;
+}
+
+
+
 .justify-end {
   display: flex;
   flex-direction: row;
@@ -64,8 +77,8 @@
 }
 
 .datagrid-header {
-  background-color: #232820;
-  color: #c4c8bb;
+  background-color: #333;
+  color: #fff;
 }
 
 .datagrid-cell {
@@ -92,4 +105,23 @@ input[type="file"] {
 }
 .custom-file-upload {
   cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.css-fay8ao-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #ffc103 !important;
+}
+
+.css-gawbvz-MuiStepIcon-text {
+  fill:#000 !important;
+  font-weight: 700;
+}
+
+.titre-rabani {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 0px;
 }

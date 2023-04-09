@@ -5,7 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Collapse, List } from "@mui/material";
+import { Collapse, List, Stack } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 
@@ -46,24 +46,34 @@ const InputStep = () => {
     <>
       <Card sx={{ width: "100%" }}>
         <CardContent>
-          <Typography sx={{ fontSize: 14, marginBottom:'15px' }} color="text.secondary" gutterBottom>
+          <Typography
+            sx={{ fontSize: 16, marginBottom: "15px", fontWeight:700 }}
+            color="text.secondary"
+            gutterBottom
+          >
             Répertoire
           </Typography>
           <div className="folder-selector">
-          <Button variant="contained" color="secondary">
-          <label for="file-upload" class="custom-file-upload">
-            Choisir un répertoire
-          </label>
-          </Button>
-          <div className="selected-folder">
-          <Typography sx={{ fontSize: 14, marginTop:'5px' }} color="text.secondary" gutterBottom>
-            
-            {localStorage.getItem("path") ? localStorage.getItem("path") : "Choisir"}
-          </Typography>
+            <Stack direction="row" alignItems="center" justifyContent="space-between">
+              <div className="selected-folder">
+                <Typography
+                  sx={{ fontSize: 14, marginTop: "5px", fontWeight:600}}
+                  
+                  gutterBottom
+                >
+                  {localStorage.getItem("path")
+                    ? localStorage.getItem("path")
+                    : "Choisir"}
+                </Typography>
+              </div>
+              <Button variant="contained">
+                <label for="file-upload" class="custom-file-upload">
+                  Choisir un répertoire
+                </label>
+              </Button>
+            </Stack>
           </div>
-          </div>
-          
-          
+
           <input
             type="file"
             id="file-upload"
@@ -72,8 +82,7 @@ const InputStep = () => {
             onChange={handleFolderChange}
           />
         </CardContent>
-        <CardActions>
-        </CardActions>
+        <CardActions></CardActions>
       </Card>
     </>
   );

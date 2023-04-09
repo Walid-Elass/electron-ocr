@@ -154,7 +154,7 @@ const ResultsStep = () => {
             <CardContent>
               <div className="head">
                 <Typography
-                  sx={{ fontSize: 16, marginBottom: "15px" }}
+                  sx={{ fontSize: 16, marginBottom: "15px", fontWeight:700 }}
                   color="text.secondary"
                   gutterBottom
                 >
@@ -178,7 +178,7 @@ const ResultsStep = () => {
                   )}
                 </IconButton>
               </div>
-              <div style={{ height: 400, width: "100%" }}>
+              <div style={{ height: 525, width: "100%" }}>
                 {results && (
                   <DataGrid
                     disableSelectionOnClick

@@ -1,7 +1,7 @@
 import "./App.css";
 import Button from "@mui/material/Button";
 import React, { useEffect, useState } from "react";
-import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+import { ThemeProvider, createTheme, CssBaseline, Typography } from "@mui/material";
 import Welcome from "./Welcome";
 import Navbar from "./Navbar";
 import InputStep from "./InputStep";
@@ -11,7 +11,7 @@ import theme from "./theme/theme";
 
 function App() {
   const [correctionMode, setCorrectionMode] = useState(false);
-  const [progress, setProgress] = useState(2);
+  const [progress, setProgress] = useState(0);
   const [demandeur, setDemandeur] = useState("");
   const [besoin, setBesoin] = useState({});
   const [config, setConfig] = useState({});
@@ -24,7 +24,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <div className="titre-rabani">PDF Extractor</div>
       <div className="App All">
+        
         {progress === -1 ? (
           <></>
         ) : (
