@@ -2,16 +2,16 @@ import { createTheme } from "@mui/material";
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
-      main: "#9cd67d",
+      main: "#e30513",
     },
     secondary: {
-      main: "#1e4e4f",
+      main: "#ffc103",
     },
     background: {
-      default: "#1a1c18",
-      paper: "#21261d",
+      default: "#fefefe",
+      paper: "#fff",
     },
   },
   shape: {
@@ -37,7 +37,6 @@ const theme = createTheme({
     MuiDataGrid: {
       styleOverrides: {
         root: {
-          border: "2px solid #43493e",
         },
       },
     },
@@ -47,7 +46,7 @@ const theme = createTheme({
           textTransform: "none",
           boxShadow: "none",
           borderWidth:'1px',
-          background:'#3e4a36',
+          background:'#e30513',
           borderRadius:'8px',
           textOverflow:'ellipsis'
         },
@@ -58,6 +57,8 @@ const theme = createTheme({
           style: {
             textTransform: 'none',
             border: 'none',
+            fontWeight:'700',
+            color:"#fff"
           },
         },
         {
@@ -73,6 +74,13 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius:8,
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow:' 0px 20px 40px -3px rgba(112, 144, 176, 0.2)',
         },
       },
     },
@@ -127,6 +135,7 @@ const theme = createTheme({
       },
     },
   },
+  
 });
 
 export default theme;

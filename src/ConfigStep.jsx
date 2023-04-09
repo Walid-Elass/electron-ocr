@@ -37,7 +37,7 @@ const ConfigStep = () => {
   const [mode, setMode] = useState("fast");
   const [openHelpOne, setOpenHelpOne] = React.useState(false);
   const [keywords, setKeywords] = useState(
-    JSON.parse(localStorage.getItem("keywords"))
+    localStorage.getItem("keywords") && JSON.parse(localStorage.getItem("keywords") )
   );
   const [newKeyword, setNewKeyword] = useState("");
   const [addMode, setAddMode] = useState(false);
@@ -48,7 +48,7 @@ const ConfigStep = () => {
   const [caseSensitive, setCaseSensitive] = useState(false);
 
   const onChipClick = (index) => {
-    const updatedKeywords = keywords.map((keyword, i) => {
+    const updatedKeywords = keywords?.map((keyword, i) => {
       if (i === index) {
         return { ...keyword, active: !keyword.active };
       }
@@ -75,7 +75,7 @@ const ConfigStep = () => {
       return { word: word.trim(), active: false };
     });
 
-    setKeywords([...keywords, ...newKeywords]);
+    keywords ? setKeywords([...keywords, ...newKeywords]) : setKeywords([...newKeywords]);
     setNewKeyword("");
     setTextFieldWidth("10ch");
     setAddMode(false);
@@ -144,7 +144,7 @@ const ConfigStep = () => {
         <CardContent>
           <div className="head">
             <Typography
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 16, fontWeight:700 }}
               color="text.secondary"
               gutterBottom
             >
@@ -209,7 +209,7 @@ const ConfigStep = () => {
         <CardContent>
           <div className="head">
             <Typography
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 16, fontWeight:700  }}
               color="text.secondary"
               gutterBottom
             >
@@ -221,7 +221,7 @@ const ConfigStep = () => {
           </div>
 
           <Grid container spacing={1} wrap="wrap">
-            {keywords.map((keyword, index) => (
+            {keywords?.map((keyword, index) => (
               <Grid item key={index}>
                 <Chip
                   onClick={() => onChipClick(index)}
@@ -292,7 +292,7 @@ const ConfigStep = () => {
         <CardContent>
           <div className="head">
             <Typography
-              sx={{ fontSize: 16 }}
+              sx={{ fontSize: 16, fontWeight:700  }}
               color="text.secondary"
               gutterBottom
             >
